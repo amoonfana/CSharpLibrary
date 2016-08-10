@@ -1,12 +1,8 @@
 ﻿//Gong Xueyuan
 //2016/8/8
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleTimer
+namespace Timer
 {
     public class Timer : IComparable<Timer>
     {

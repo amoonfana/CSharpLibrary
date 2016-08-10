@@ -42,7 +42,7 @@ public static class ListExtra
 }
 #endregion
 
-namespace ConsoleTimer
+namespace Timer
 {
     /// <summary>
     /// ¶þ²æ¶ÑÊµÏÖ
