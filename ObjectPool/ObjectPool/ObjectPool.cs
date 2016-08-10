@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleObjectPool
+namespace ObjectPool
 {
     public interface IObjPoolItem
     {
@@ -37,11 +34,11 @@ namespace ConsoleObjectPool
             return t;
         }
 
-        public T freeObject(T t)
+        public void freeObject(ref T t)
         {
             t.onFree(objects.Count);
             objects.Push(t);
-            return default(T);
+            t = default(T);
         }
     }
 }

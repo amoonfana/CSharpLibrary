@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleObjectPool
+namespace ObjectPool
 {
     public class A : IObjPoolItem
     {
@@ -25,8 +21,9 @@ namespace ConsoleObjectPool
             ObjectPool<A> aPool = new ObjectPool<A>(10);
             A a = aPool.newObject();
             A b = aPool.newObject();
-            a = aPool.freeObject(a);
-            b = aPool.freeObject(b);
+            aPool.freeObject(ref a);
+            //aPool.freeObject(ref a);    //Illegal, repeatedly free one object
+            aPool.freeObject(ref b);
             A c = aPool.newObject();
             Console.ReadLine();
         }
