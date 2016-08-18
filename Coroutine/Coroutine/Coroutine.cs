@@ -8,7 +8,7 @@ namespace Coroutine
     public static class Coroutine
     {
         static List<IEnumerator> routines = new List<IEnumerator>();
-
+        
         public static int Count
         {
             get { return routines.Count; }
@@ -19,7 +19,7 @@ namespace Coroutine
             routines.Add(routine);
         }
 
-        public static void StopCoroutine(IEnumerator routine)
+        public static void Stop(IEnumerator routine)
         {
             routines.Remove(routine);
         }

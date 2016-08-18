@@ -34,7 +34,7 @@ namespace Coroutine
                 Coroutine.Update();
             }
 
-            Console.Read();
+            //Console.Read();
         }
         #endregion
     }
